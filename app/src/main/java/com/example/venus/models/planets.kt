@@ -1,7 +1,13 @@
 package com.example.venus.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 
-data class Planets(var title: String){
-
-}
+@Entity
+data class Planets(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int,
+    val title: String,
+    val description: String
+)
